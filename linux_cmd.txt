@@ -1,0 +1,77 @@
+1. here we store the linux command line I have used 
+1. move files to another director: pwd first in command to get the full directory you want to move. Then use cd to enter the place the file locating 
+  then use mv "file"
+
+    t.e.x  cp 1.\ SQL、怎么在不同组内排序.ipynb /c/Users/zhuan/mySqlPractice/
+ here we copy the file to another directory t.x.e mv filename /c/Users/zhuan/mySqlPractice/
+then it will move or update the files 
+
+2. touch jjj.txt # will create a new text if it does not exsit 
+   nano jjj.txt # will open a txt editor. we could write notes here. 
+
+   when you have done or want to exit press ctrl+X then it will ask you to save the modify 
+3. git merge branch_name(we call git merge huan in local main branch then huan's change will be merged to main branch) will do forward merge by default so it will only merge sub brach's change to main and 
+it does not matter we call this git merge in main branch or huan branch huan is the new brach we use checkout to create 
+usually we could keep main branch unchanged and only do our changes in huan branch and when it is ready we use git merge to merge our changes from huan to main
+
+if you .... it will create a merge commit. 
+
+3.2 how to copy files to a file or a folder:
+cp file.txt /backup
+
+
+4. so if you do you changes in main branch directly then you huan branch will not be updated with this change you did in main branch 
+if you want to sync your huan branch then you need to use git pull remote_name branch_name after you have git push you change from main to remote main
+the remote_name is called origin 
+so we use:
+git pull origin main 
+since we only have one remote branch it is called main. which is default tracking local main branch 
+so in local main branch we do not give the detail of remote_name, branch_name
+we use git pull directly to sync local main to be same with remote main 
+but in huan branch we do not create this huan remote branch for tracking local huan's change so we use remote main to sync local huan branch 
+but when we do changes in local huan branch we do not use git push --upstream remote_name branch_name to do this kind of oush 
+we do git merge locally first to merge huan branch change to be local main branch then git push in local main. it will by default to push changes 
+to remote main 
+
+4. different git merge 
+git merge main -- call this at local huan branch. the change we did in huan cannot be merged to main 
+
+git merge huan -- call this at local main branch. it works. local main will be updated 
+
+git merge huan -- call this at local huan branch? no changes in local main 
+
+git merge main -- call this at local main branch? no changes in local main .
+
+
+5. so we only use call git merge huan at local main. this will merge huan'change to be main branch and this is called forward merge 
+this is very clean merge we also can call git merge -d huan then it will delete this temporary working branch huan after merge the changes to local main branch 
+
+
+6. git status -- call this in any branches then it will show if we have make changes in this local branch files, then if we did then we need to use 
+git add. then git commit -m 'comments' to commit our changes in this local branch then see if it is a local main or not to see if we need to call 
+git merge sub_branch_name to merge our change to local main then call git push from local main branch to push our changes to remote main 
+
+
+7. it seems git push only will update remote main if we call git push at local main after calling git merge huan at local main when we did some changes in local huan branch
+
+if i did changes in local huan branch then git push origin main at local huan directly it will not update remote main files 
+
+
+8. Usually the feature branches(temporary working branchs) is created and it will copy all files from main. Then we are expected to work in features branches when we want to add
+new features then git merge feature_branch at local main. 
+But if we have created this fearure branch then we still do some changes in local main then how to merge the feature branch to the main branch and keep the new commit you do in the base branch? 
+does this mean? if I call git merge feature_branch at local main it will remove the change we did in main?
+
+9. C# 
+main method: https://www.geeksforgeeks.org/main-method-in-c-sharp/
+Propertities: https://www.geeksforgeeks.org/c-sharp-properties/
+.net framework: https://www.geeksforgeeks.org/c-sharp-net-framework-basic-architecture-component-stack/
+Array: https://www.geeksforgeeks.org/c-sharp-arrays/?ref=lbp
+constructor: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/instance-constructors
+static class and static members: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members
+feild: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/fields
+Net: https://docs.microsoft.com/en-us/dotnet/core/introduction
+Attributes: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection
+Polynophsim: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords
+https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/polymorphism
+https://www.c-sharpcorner.com/UploadFile/ff2f08/understanding-polymorphism-in-C-Sharp/
